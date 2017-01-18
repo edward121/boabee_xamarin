@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000">
+    <TextView
+        android:text="info sheet details"
+        android:textColor="#edcd00"
+        android:gravity="left"
+        android:id="@+id/textViewTitle"
+        android:textSize="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"
+        android:textAllCaps="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textViewTitle">
+        <TextView
+            android:text="fjngkjfsngndkgdfkgdgdkfngkndfgkdfngkdnfkgndkngknfknkdngfkdnkndknjfngdgdfgdfgdfgdfgdgdgdfgdggdfg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#717171"
+            android:textSize="15dp"
+            android:id="@+id/textCustomer"
+            android:gravity="left"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="8dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:layout_below="@+id/ll1"
+        android:layout_above="@+id/linearLayout3">
+        <ScrollView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/scrollView1"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listFormsAnswers" />
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/linearLayout3"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:text="close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonClose"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:background="@drawable/add_prospect_button"
+            android:gravity="center" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/Top">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:id="@+id/Top2"
+            p1:gravity="left"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent">
+            <TextView
+                p1:text="INFO TO MAIL"
+                p1:textAppearance="?android:attr/textAppearanceLarge"
+                p1:layout_width="wrap_content"
+                p1:layout_height="match_parent"
+                p1:id="@+id/textView1"
+                p1:textColor="#edcd00"
+                p1:paddingTop="16dp"
+                p1:paddingBottom="8dp"
+                p1:paddingLeft="32dp"
+                p1:textSize="24dp" />
+            <LinearLayout
+                p1:orientation="horizontal"
+                p1:minWidth="25px"
+                p1:minHeight="25px"
+                p1:layout_width="match_parent"
+                p1:layout_height="match_parent"
+                p1:id="@+id/linearLayout8"
+                p1:gravity="right"
+                p1:paddingTop="16dp"
+                p1:paddingBottom="8dp"
+                p1:paddingRight="32dp">
+                <TextView
+                    p1:text="0"
+                    p1:textAppearance="?android:attr/textAppearanceMedium"
+                    p1:id="@+id/countFiles"
+                    p1:gravity="center"
+                    p1:layout_width="wrap_content"
+                    p1:layout_height="wrap_content"
+                    p1:background="@drawable/button_file_count"
+                    p1:textColor="#ff000000" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            p1:text="Select information to send to your contact(s)"
+            p1:textAppearance="?android:attr/textAppearanceSmall"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/textView2"
+            p1:paddingLeft="32dp"
+            p1:paddingBottom="8dp"
+            p1:textColor="#717171" />
+    </LinearLayout>
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/linearLayoutUp"
+        p1:paddingTop="32dp"
+        p1:paddingRight="32dp"
+        p1:paddingBottom="32dp"
+        p1:paddingLeft="32dp"
+        p1:gravity="center_vertical"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        tools:visibility="gone"
+        p1:layout_below="@+id/Top">
+        <ImageView
+            p1:src="@drawable/folder_opened"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/imageView1"
+            p1:layout_marginRight="20dp"
+            p1:scaleType="fitEnd"
+            p1:adjustViewBounds="true" />
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout5">
+            <TextView
+                p1:text="Go to Up"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/nameFolderUp"
+                p1:textColor="#FFF"
+                p1:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/ShowContacts"
+        p1:layout_alignParentBottom="true"
+        p1:layout_centerHorizontal="true"
+        p1:background="@drawable/add_prospect_button"
+        p1:textSize="25dp"
+        p1:textColor="#000"
+        p1:gravity="center"
+        p1:text="next" />
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayoutFiles"
+        p1:gravity="center_vertical"
+        p1:visibility="gone"
+        p1:layout_above="@+id/ShowContacts"
+        tools:visibility="gone">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="2dp"
+            p1:id="@+id/linearLayout6"
+            p1:visibility="visible"
+            p1:background="#000000"
+            p1:fitsSystemWindows="false" />
+        <ListView
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/listFiles"
+            p1:layout_marginBottom="10dp"
+            p1:dividerHeight="0dp"
+            p1:divider="#00000000"
+            p1:scrollbars="none"
+            p1:visibility="visible"
+            p1:layout_marginTop="5dp"
+            p1:listSelector="#00000000"
+            p1:textFilterEnabled="true"
+            p1:smoothScrollbar="true"
+            tools:listitem="@layout/listitemsharefiles"
+            p1:background="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayoutFolders"
+        p1:gravity="center_vertical"
+        p1:layout_above="@+id/ShowContacts"
+        p1:visibility="gone"
+        p1:layout_below="@+id/linearLayoutUp">
+        <ListView xmlns:tools="http://schemas.android.com/tools"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/listFolders"
+            p1:layout_marginBottom="10dp"
+            p1:layout_marginTop="10dp"
+            p1:dividerHeight="1dp"
+            p1:divider="#1B1B1B"
+            p1:scrollbars="none"
+            p1:visibility="visible"
+            p1:fastScrollEnabled="true"
+            p1:smoothScrollbar="true"
+            p1:listSelector="#1B1B1B"
+            tools:listitem="@layout/listitemsharefolders" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout3"
+        p1:layout_alignParentBottom="true"
+        p1:layout_toRightOf="@+id/ShowContacts"
+        p1:gravity="left" />
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/popRelative"
+        p1:visibility="gone">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/linearLayoutForTap"
+            p1:visibility="visible" />
+        <ListView xmlns:tools="http://schemas.android.com/tools"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:id="@+id/listViewApps"
+            p1:divider="#717171"
+            p1:dividerHeight="1dp"
+            p1:background="@drawable/bordershadowdialoglinear"
+            p1:layout_width="230dp"
+            p1:layout_height="200dp"
+            p1:layout_above="@+id/imageDialog"
+            p1:layout_marginBottom="-2dp"
+            p1:layout_centerHorizontal="true"
+            p1:listSelector="#00000000"
+            tools:listitem="@layout/listitemcontactdialog" />
+        <ImageView
+            p1:src="@drawable/triangle"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/imageDialog"
+            p1:layout_centerHorizontal="true"
+            p1:layout_alignParentBottom="true"
+            p1:layout_marginBottom="30dp"
+            p1:adjustViewBounds="false" />
+    </RelativeLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/tapzoneblock"
+        p1:visibility="gone" />
+    <TextView
+        p1:text="You are not have a files."
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textFilesNo"
+        p1:textColor="#FFF"
+        p1:textSize="18dp"
+        p1:layout_centerInParent="true" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/linearLayout3"
+        p1:gravity="bottom"
+        p1:layout_width="wrap_content"
+        p1:layout_height="match_parent"
+        p1:paddingLeft="5dp">
+        <TextView
+            p1:text="X"
+            p1:layout_width="60.0dp"
+            p1:layout_height="25.0dp"
+            p1:id="@+id/cancelButton"
+            p1:textSize="18dp"
+            p1:gravity="center"
+            p1:background="@drawable/buttong"
+            p1:textColor="#ff000000" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#000">
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/relativeLayout2"
+        p1:layout_centerHorizontal="true"
+        p1:layout_centerVertical="true">
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            p1:id="@+id/textView1"
+            p1:background="@drawable/combyelow"
+            p1:text="Touch to Start"
+            p1:textAllCaps="true"
+            p1:gravity="center"
+            p1:textSize="35dp"
+            tools:visibility="visible"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:layout_centerHorizontal="true"
+            p1:layout_centerVertical="true" />
+        <ImageView
+            p1:src="@android:drawable/ic_menu_gallery"
+            p1:id="@+id/imageView1"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:layout_centerInParent="true"
+            p1:layout_centerHorizontal="true"
+            p1:scaleType="fitCenter"
+            p1:layout_centerVertical="true"
+            p1:layout_above="@+id/textView2" />
+    </RelativeLayout>
+    <TextView
+        p1:layout_width="20dp"
+        p1:layout_height="20dp"
+        p1:id="@+id/textView2"
+        p1:layout_alignParentBottom="true" />
+</RelativeLayout>

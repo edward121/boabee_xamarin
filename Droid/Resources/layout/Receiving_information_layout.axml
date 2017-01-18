@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#000">
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2"
+        p1:layout_centerInParent="true"
+        p1:layout_marginTop="32dp" />
+    <ImageView
+        p1:src="@drawable/bee"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/logobee"
+        p1:layout_above="@+id/linearLayout2"
+        p1:layout_centerHorizontal="true" />
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/relativeLayout2"
+        p1:layout_below="@+id/linearLayout2"
+        p1:layout_centerHorizontal="true"
+        p1:background="@drawable/comb_yellow">
+        <TextView
+            p1:text="50%"
+            p1:id="@+id/percentDownload"
+            p1:textColor="#000"
+            p1:textSize="18dp"
+            p1:gravity="center"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView
+        p1:text="We are downloading all your contacts, sales questions and documentation. This can take a few minutes, depending on the speed of your connection."
+        p1:layout_width="255dp"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/infodownload"
+        p1:gravity="center"
+        p1:layout_alignParentBottom="true"
+        p1:layout_centerHorizontal="true"
+        p1:textColor="#FFFFFF"
+        p1:textSize="16dp"
+        p1:layout_marginBottom="16dp" />
+</RelativeLayout>

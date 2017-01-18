@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/DialogCloseKiosok"
+    android:gravity="center">
+    <TextView
+        android:text="After 5 sek, this session is close"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="290.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCloseDialog"
+        android:gravity="center"
+        android:textSize="16dp" />
+    <Button
+        android:text="I'm here"
+        android:id="@+id/buttonclosedialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16dp" />
+</LinearLayout>

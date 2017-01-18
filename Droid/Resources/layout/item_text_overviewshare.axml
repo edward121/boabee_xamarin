@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="wrap_content"
+    p1:id="@+id/relativeLayout1">
+    <TextView
+        p1:text="Text"
+        p1:id="@+id/textSpin"
+        p1:gravity="left"
+        p1:textSize="18dp"
+        p1:textColor="#FFF"
+        p1:paddingTop="16dp"
+        p1:paddingBottom="16dp"
+        p1:paddingRight="32dp"
+        p1:paddingLeft="32dp"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:layout_toLeftOf="@+id/textDate"
+        p1:layout_centerVertical="true" />
+    <TextView
+        p1:id="@+id/textDate"
+        p1:gravity="right"
+        p1:textSize="14dp"
+        p1:textColor="#FFF"
+        p1:paddingTop="16dp"
+        p1:paddingBottom="16dp"
+        p1:paddingRight="32dp"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_alignParentRight="true"
+        p1:text="25.11.15 12:05"
+        p1:layout_centerVertical="true" />
+</RelativeLayout>

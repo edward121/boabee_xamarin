@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{F6CAB31F-F0FE-4870-9AF0-BF96D5005FAA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>BoaBee.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>BoaBee.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;DEBUG;ENABLE_TEST_CLOUD;__SIMULATOR__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: Fedor Petrenko (7EAKKP75SX)</CodesignKey>
+    <CodesignProvision>6c758f15-7e1f-46df-9571-f68af64f0982</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution: qtree solutions bvba (GE6NC7R3GW)</CodesignKey>
+    <CodesignProvision>460ee2b7-8859-44d2-a302-f2608abe1588</CodesignProvision>
+    <IpaPackageName>
+    </IpaPackageName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer: Fedor Petrenko (7EAKKP75SX)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <CodesignProvision>6c758f15-7e1f-46df-9571-f68af64f0982</CodesignProvision>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.13.0\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCL.raw">
+      <HintPath>..\packages\SQLitePCL.raw_basic.0.7.1\lib\Xamarin.iOS10\SQLitePCL.raw.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="ScanditSDK">
+      <HintPath>..\Components\scandit-4.9.0\lib\ios-unified\ScanditSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.2.12\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.2.12\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net45+win8\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net45+win8\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="FireSharp">
+      <HintPath>..\packages\FireSharp.2.0.4\lib\portable-net45+sl5+wp8+win8\FireSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DottedLineLong.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\DottedLine.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\DottedLine.imageset\dotted_line.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DottedLineLong.imageset\dotted_line_long.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombYellow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\BlackLine.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\BlackLine.imageset\Black line.png" />
+    <ImageAsset Include="Resources\Images.xcassets\YellowBar.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\YellowBar.imageset\YellowBar.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspect.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY2.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY3.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Logo1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspect.imageset\add_prospect%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY1.imageset\comb_1%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY2.imageset\comb_2%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY3.imageset\comb_3%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Logo1.imageset\bee%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ArrowsGray.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudGray.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ContactsButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\PlusButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\TickButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ArrowsGray.imageset\arrows%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudGray.imageset\cloud%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ContactsButton.imageset\contacts%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LinksButtonFromAndroid.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LinksButtonFromAndroid.imageset\links.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\login%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\PlusButton.imageset\add%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TickButton.imageset\button_V%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BinGray.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\BinGray.imageset\bin%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DeleteCrossButtonFromAndroid.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\DeleteCrossButtonFromAndroid.imageset\cross.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Badge.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Manual.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Lookup.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Badge.imageset\hs%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Manual.imageset\list%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Lookup.imageset\search%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Folder.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\FolderOpened.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Folder.imageset\file%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\FolderOpened.imageset\file_2%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudRed.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudRed.imageset\red_cloud%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CrossButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LinksButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CrossButton.imageset\cross_button%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LinksButton.imageset\share_button%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LineLong.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LineShort.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LineLong.imageset\line%401.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LineShort.imageset\short_line%401.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LineLong.imageset\line%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LineShort.imageset\short_line%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombYellow.imageset\yellow_comb%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\640x960.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\640x1136.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\bee_launcher%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\bee_launcher%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1242x2208.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\750x1334.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\57x57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\87x87.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\114x114.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\768x1024.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1536x2048.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1024x768.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\2048x1536.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY1.imageset\comb_1-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY2.imageset\comb_2-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombY3.imageset\comb_3-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspect.imageset\add_prospect-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CombYellow.imageset\yellow_comb-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ArrowButtonNew.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\ArrowButtonNew.imageset\button_Av%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Logo1.imageset\bee-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ArrowsGray.imageset\arrows-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\BinGray.imageset\bin-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudGray.imageset\cloud-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ArrowButtonNew.imageset\button_Av-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\ContactsButton.imageset\contacts-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LinksButton.imageset\share_button-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TickButton.imageset\button_V-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CrossButton.imageset\cross_button-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Badge.imageset\hs-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Lookup.imageset\search-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Manual.imageset\list-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\iboabee 76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\iboabee 152.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Image1.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\Image1.imageset\1536x2048.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarYellowArrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarBlackArrow.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LoginButton.imageset\login-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\PlusButton.imageset\add-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Folder.imageset\file-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\FolderOpened.imageset\file_2-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudRed.imageset\red_cloud-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarBlackArrow.imageset\arrow black%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarBlackArrow.imageset\arrow black%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarBlackArrow.imageset\arrow black%401.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarBlackArrow.imageset\iPad arrow black%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarYellowArrow.imageset\arrow yellow%401.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarYellowArrow.imageset\iPad arrow yellow%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarYellowArrow.imageset\arrow yellow%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TabBarYellowArrow.imageset\arrow yellow%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButton.imageset\settings-IPh%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButton.imageset\settings-IPh%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButton.imageset\settings-IP%40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButton.imageset\settings-IP%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CheckboxChecked.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CheckboxUnchecked.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CheckboxChecked.imageset\add-checkbox-%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CheckboxChecked.imageset\add-checkbox-%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CheckboxUnchecked.imageset\add-checkbox-out-%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CheckboxUnchecked.imageset\add-checkbox-out-%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DefaultFile.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\DefaultFile.imageset\icon-%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DefaultFile.imageset\icon-%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DefaultFile.imageset\icon-Pad%401.png" />
+    <ImageAsset Include="Resources\Images.xcassets\DefaultFile.imageset\icon-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskSettings.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskSettings.imageset\icon-kiosk%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskSettings.imageset\icon-kiosk%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskSettings.imageset\icon-kiosk-Pad%401.png" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskSettings.imageset\icon-kiosk-Pad%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskDefaultWelcome.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskDefaultFinish.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectBlack.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskDefaultWelcome.imageset\KioskDefaultWelcome%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\KioskDefaultFinish.imageset\KioskDefaultFinish%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectBlack.imageset\button-black-%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectBlack.imageset\button-black-%403.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectBlack.imageset\button-black-iP-%40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectBlack.imageset\button-black-iP-%402.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectMain.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\MultiScan.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\SingleScan.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\SingleScan.imageset\icon_single.png" />
+    <ImageAsset Include="Resources\Images.xcassets\MultiScan.imageset\Копия icon_multi.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectSmall.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectSmall.imageset\add_prospect%402-small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectSmall.imageset\add_prospect%403-small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CrossButtonSmall.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\TickButtonSmall.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CrossButtonSmall.imageset\button_n_g2%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CrossButtonSmall.imageset\button_n_g2%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TickButtonSmall.imageset\button_n_g%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\TickButtonSmall.imageset\button_n_g%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SelectedFilesButton.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\SelectedFilesButton.imageset\button_file_account.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Eye.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudRedNoFrame.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButtonNoFrame.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudRedNoFrame.imageset\settings_button.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButtonNoFrame.imageset\settingsIP.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectMain.imageset\button_add_prospect.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AddProspectMain.imageset\button_add_prospect_ipad.png" />
+    <ImageAsset Include="Resources\Images.xcassets\CloudRedNoFrame.imageset\settings_button_ipad.png" />
+    <ImageAsset Include="Resources\Images.xcassets\SettingsButtonNoFrame.imageset\settings_ipad.png" />
+    <ImageAsset Include="Resources\Images.xcassets\EyeCrossed.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\EyeCrossed.imageset\eye-crossed.png" />
+    <ImageAsset Include="Resources\Images.xcassets\EyeCrossed.imageset\eye-crossed 128.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Eye.imageset\eye.png" />
+    <ImageAsset Include="Resources\Images.xcassets\Eye.imageset\eye 128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="iPad.storyboard" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="SelectAppTableSource.cs" />
+    <Compile Include="ViewController\AddProspectRootViewController.cs" />
+    <Compile Include="ViewController\AddProspectRootViewController.designer.cs">
+      <DependentUpon>AddProspectRootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\AppLoadingViewController.cs" />
+    <Compile Include="ViewController\AppLoadingViewController.designer.cs">
+      <DependentUpon>AppLoadingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\BoaBeeBasePageContentViewController.cs" />
+    <Compile Include="ViewController\BoaBeePageViewController.cs" />
+    <Compile Include="ViewController\BoaBeePageViewController.designer.cs">
+      <DependentUpon>BoaBeePageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\IdentifyViewController.cs" />
+    <Compile Include="ViewController\IdentifyViewController.designer.cs">
+      <DependentUpon>IdentifyViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\InfoViewController.cs" />
+    <Compile Include="ViewController\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\LoginViewController.cs" />
+    <Compile Include="ViewController\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\MyWorkViewController.cs" />
+    <Compile Include="ViewController\MyWorkViewController.designer.cs">
+      <DependentUpon>MyWorkViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\SelectAppViewController.cs" />
+    <Compile Include="ViewController\SelectAppViewController.designer.cs">
+      <DependentUpon>SelectAppViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\SelectQuestionsViewController.cs" />
+    <Compile Include="ViewController\SelectQuestionsViewController.designer.cs">
+      <DependentUpon>SelectQuestionsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\SettingsViewController.cs" />
+    <Compile Include="ViewController\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\ShareViewController.cs" />
+    <Compile Include="ViewController\ShareViewController.designer.cs">
+      <DependentUpon>ShareViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HighlightableButton.cs" />
+    <Compile Include="UI\HighlightableButton.designer.cs">
+      <DependentUpon>HighlightableButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoadingOverlay.cs" />
+    <Compile Include="UI\TableCells\AppCell.cs" />
+    <Compile Include="UI\TableCells\AppCell.designer.cs">
+      <DependentUpon>..\..\TableCells\AppCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\SelectQuestionsCell.cs" />
+    <Compile Include="UI\TableCells\SelectQuestionsCell.designer.cs">
+      <DependentUpon>..\..\TableCells\SelectQuestionsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\QuestionCell.cs" />
+    <Compile Include="UI\TableCells\QuestionCell.designer.cs">
+      <DependentUpon>QuestionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\AnswerCell.cs" />
+    <Compile Include="UI\TableCells\AnswerCell.designer.cs">
+      <DependentUpon>AnswerCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\AnswerSelectionCell.cs" />
+    <Compile Include="UI\TableCells\AnswerSelectionCell.designer.cs">
+      <DependentUpon>AnswerSelectionCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\AnswerTypingCell.cs" />
+    <Compile Include="UI\TableCells\AnswerTypingCell.designer.cs">
+      <DependentUpon>AnswerTypingCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\SelectAnswerViewController.cs" />
+    <Compile Include="ViewController\SelectAnswerViewController.designer.cs">
+      <DependentUpon>SelectAnswerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\SelectContactViewController.cs" />
+    <Compile Include="ViewController\SelectContactViewController.designer.cs">
+      <DependentUpon>SelectContactViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\BackCell.cs" />
+    <Compile Include="UI\TableCells\BackCell.designer.cs">
+      <DependentUpon>BackCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\ContactCell.cs" />
+    <Compile Include="UI\TableCells\ContactCell.designer.cs">
+      <DependentUpon>ContactCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\ContactOverviewCell.cs" />
+    <Compile Include="UI\TableCells\ContactOverviewCell.designer.cs">
+      <DependentUpon>ContactOverviewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\ContactsOverviewViewController.cs" />
+    <Compile Include="ViewController\ContactsOverviewViewController.designer.cs">
+      <DependentUpon>ContactsOverviewViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\FileCell.cs" />
+    <Compile Include="UI\TableCells\FileCell.designer.cs">
+      <DependentUpon>FileCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\FolderCell.cs" />
+    <Compile Include="UI\TableCells\FolderCell.designer.cs">
+      <DependentUpon>FolderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\ContactEmailCell.cs" />
+    <Compile Include="UI\TableCells\ContactEmailCell.designer.cs">
+      <DependentUpon>ContactEmailCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\ContactInfoSheetCell.cs" />
+    <Compile Include="UI\TableCells\ContactInfoSheetCell.designer.cs">
+      <DependentUpon>ContactInfoSheetCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\ContactsMetCell.cs" />
+    <Compile Include="UI\TableCells\ContactsMetCell.designer.cs">
+      <DependentUpon>ContactsMetCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\FilesOverviewCell.cs" />
+    <Compile Include="UI\TableCells\FilesOverviewCell.designer.cs">
+      <DependentUpon>FilesOverviewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\ContactsMetViewController.cs" />
+    <Compile Include="ViewController\ContactsMetViewController.designer.cs">
+      <DependentUpon>ContactsMetViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\EmailsSentViewController.cs" />
+    <Compile Include="ViewController\EmailsSentViewController.designer.cs">
+      <DependentUpon>EmailsSentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\FilesOverviewViewController.cs" />
+    <Compile Include="ViewController\FilesOverviewViewController.designer.cs">
+      <DependentUpon>FilesOverviewViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\InfoSheetsViewController.cs" />
+    <Compile Include="ViewController\InfoSheetsViewController.designer.cs">
+      <DependentUpon>InfoSheetsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\NewContactRootViewController.cs" />
+    <Compile Include="ViewController\NewContactRootViewController.designer.cs">
+      <DependentUpon>NewContactRootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\NewContactTableViewController.cs" />
+    <Compile Include="ViewController\NewContactTableViewController.designer.cs">
+      <DependentUpon>NewContactTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\ScannerViewController.cs" />
+    <Compile Include="ViewController\ScannerViewController.designer.cs">
+      <DependentUpon>ScannerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Managers\DownloadManager\DownloadManager.cs" />
+    <Compile Include="Managers\DownloadManager\DownloadSession.cs" />
+    <Compile Include="ViewController\ContactOverviewRootViewController.cs" />
+    <Compile Include="ViewController\ContactOverviewRootViewController.designer.cs">
+      <DependentUpon>ContactOverviewRootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\ContactOverviewTableViewController.cs" />
+    <Compile Include="ViewController\ContactOverviewTableViewController.designer.cs">
+      <DependentUpon>ContactOverviewTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\EditContactRootViewController.cs" />
+    <Compile Include="ViewController\EditContactRootViewController.designer.cs">
+      <DependentUpon>EditContactRootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\EditContactTableViewController.cs" />
+    <Compile Include="ViewController\EditContactTableViewController.designer.cs">
+      <DependentUpon>EditContactTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\EmailSentViewController.cs" />
+    <Compile Include="ViewController\EmailSentViewController.designer.cs">
+      <DependentUpon>EmailSentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\InfoSheetViewController.cs" />
+    <Compile Include="ViewController\InfoSheetViewController.designer.cs">
+      <DependentUpon>InfoSheetViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\FileDetailCell.cs" />
+    <Compile Include="UI\TableCells\FileDetailCell.designer.cs">
+      <DependentUpon>FileDetailCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\InfoSheetDetailsCell.cs" />
+    <Compile Include="UI\TableCells\InfoSheetDetailsCell.designer.cs">
+      <DependentUpon>InfoSheetDetailsCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addProspectPagesEnum.cs" />
+    <Compile Include="ViewController\EditAnswerViewController.cs" />
+    <Compile Include="ViewController\EditAnswerViewController.designer.cs">
+      <DependentUpon>EditAnswerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\DefaultShareViewController.cs" />
+    <Compile Include="ViewController\DefaultShareViewController.designer.cs">
+      <DependentUpon>DefaultShareViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewEffects.cs" />
+    <Compile Include="ViewController\DefaultShareOverviewViewController.cs" />
+    <Compile Include="ViewController\DefaultShareOverviewViewController.designer.cs">
+      <DependentUpon>DefaultShareOverviewViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TableCells\DefaultShareOverviewCell.cs" />
+    <Compile Include="UI\TableCells\DefaultShareOverviewCell.designer.cs">
+      <DependentUpon>DefaultShareOverviewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SafariDelegate.cs" />
+    <Compile Include="DateFormatter.cs" />
+    <Compile Include="ViewController\KioskStatusViewController.cs" />
+    <Compile Include="ViewController\KioskStatusViewController.designer.cs">
+      <DependentUpon>KioskStatusViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskViewController.cs" />
+    <Compile Include="ViewController\KioskViewController.designer.cs">
+      <DependentUpon>KioskViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\IAnswerSelection.cs" />
+    <Compile Include="AlertTagEnum.cs" />
+    <Compile Include="CustomUIApplication.cs" />
+    <Compile Include="DBFileToComparer.cs" />
+    <Compile Include="TestColorPicker.cs" />
+    <Compile Include="TestColorPicker.designer.cs">
+      <DependentUpon>TestColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskEmailViewController.cs" />
+    <Compile Include="ViewController\KioskEmailViewController.designer.cs">
+      <DependentUpon>KioskEmailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskFinishViewController.cs" />
+    <Compile Include="ViewController\KioskFinishViewController.designer.cs">
+      <DependentUpon>KioskFinishViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskLoopNavigationController.cs" />
+    <Compile Include="ViewController\KioskLoopNavigationController.designer.cs">
+      <DependentUpon>KioskLoopNavigationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskQuestionsViewController.cs" />
+    <Compile Include="ViewController\KioskQuestionsViewController.designer.cs">
+      <DependentUpon>KioskQuestionsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskSettingsTableViewController.cs" />
+    <Compile Include="ViewController\KioskSettingsTableViewController.designer.cs">
+      <DependentUpon>KioskSettingsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskSettingsViewController.cs" />
+    <Compile Include="ViewController\KioskSettingsViewController.designer.cs">
+      <DependentUpon>KioskSettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\KioskWelcomeViewController.cs" />
+    <Compile Include="ViewController\KioskWelcomeViewController.designer.cs">
+      <DependentUpon>KioskWelcomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\BoabeeRootNavController.cs" />
+    <Compile Include="ViewController\BoabeeRootNavController.designer.cs">
+      <DependentUpon>BoabeeRootNavController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="colorPickerMode.cs" />
+    <Compile Include="ViewController\KioskBaseViewController.cs" />
+    <Compile Include="ViewController\AppearanceRootViewController.cs" />
+    <Compile Include="ViewController\AppearanceRootViewController.designer.cs">
+      <DependentUpon>AppearanceRootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewController\AppearanceTableViewController.cs" />
+    <Compile Include="ViewController\AppearanceTableViewController.designer.cs">
+      <DependentUpon>AppearanceTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSettingsViewController.cs" />
+    <Compile Include="AppSettingsViewController.designer.cs">
+      <DependentUpon>AppSettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditScannedContactRootViewController.cs" />
+    <Compile Include="EditScannedContactRootViewController.designer.cs">
+      <DependentUpon>EditScannedContactRootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditScannedContactTableViewController.cs" />
+    <Compile Include="EditScannedContactTableViewController.designer.cs">
+      <DependentUpon>EditScannedContactTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Alert.cs" />
+    <Compile Include="BoabeeProspectNavController.cs" />
+    <Compile Include="BoabeeProspectNavController.designer.cs">
+      <DependentUpon>BoabeeProspectNavController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="..\BoaBeeLogic\BoaBeeLogic.projitems" Label="Shared" Condition="Exists('..\BoaBeeLogic\BoaBeeLogic.projitems')" />
+  <Import Project="..\MultiWriter\MultiWriter.projitems" Label="Shared" Condition="Exists('..\MultiWriter\MultiWriter.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="ViewController\" />
+    <Folder Include="UI\" />
+    <Folder Include="UI\TableCells\" />
+    <Folder Include="Resources\Images.xcassets\BlackLine.imageset\" />
+    <Folder Include="Resources\Images.xcassets\YellowBar.imageset\" />
+    <Folder Include="Resources\Images.xcassets\AddProspect.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CombY1.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CombY2.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CombY3.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Logo1.imageset\" />
+    <Folder Include="Resources\Images.xcassets\ArrowsGray.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CloudGray.imageset\" />
+    <Folder Include="Resources\Images.xcassets\ContactsButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\LoginButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\PlusButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\TickButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\LinksButtonFromAndroid.imageset\" />
+    <Folder Include="Resources\Images.xcassets\BinGray.imageset\" />
+    <Folder Include="Resources\Images.xcassets\DeleteCrossButtonFromAndroid.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Badge.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Manual.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Lookup.imageset\" />
+    <Folder Include="Resources\Images.xcassets\##SelectYourFairButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Folder.imageset\" />
+    <Folder Include="Resources\Images.xcassets\FolderOpened.imageset\" />
+    <Folder Include="Managers\" />
+    <Folder Include="Managers\DownloadManager\" />
+    <Folder Include="Resources\Images.xcassets\CloudRed.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CrossButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\LinksButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\ArrowButtonNew.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Image1.imageset\" />
+    <Folder Include="Resources\Images.xcassets\SettingsButtonOLD.imageset\" />
+    <Folder Include="Resources\Images.xcassets\SettingsButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CheckboxCheckedOLD.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CheckboxChecked.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CheckboxUncheckedOLD.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CheckboxUnchecked.imageset\" />
+    <Folder Include="Resources\Images.xcassets\DefaultFileOLD.imageset\" />
+    <Folder Include="Resources\Images.xcassets\DefaultFile.imageset\" />
+    <Folder Include="Resources\Images.xcassets\KioskSettings.imageset\" />
+    <Folder Include="Resources\Images.xcassets\KioskDefaultWelcome.imageset\" />
+    <Folder Include="Resources\Images.xcassets\KioskDefaultFinish.imageset\" />
+    <Folder Include="Resources\Images.xcassets\AddProspectBlack.imageset\" />
+    <Folder Include="Resources\Images.xcassets\AddProspectMain.imageset\" />
+    <Folder Include="Resources\Images.xcassets\MultiScan.imageset\" />
+    <Folder Include="Resources\Images.xcassets\SingleScan.imageset\" />
+    <Folder Include="Resources\Images.xcassets\AddProspectSmall.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CrossButtonSmall.imageset\" />
+    <Folder Include="Resources\Images.xcassets\TickButtonSmall.imageset\" />
+    <Folder Include="Resources\Images.xcassets\SelectedFilesButton.imageset\" />
+    <Folder Include="Resources\Images.xcassets\Eye.imageset\" />
+    <Folder Include="Resources\Images.xcassets\CloudRedNoFrame.imageset\" />
+    <Folder Include="Resources\Images.xcassets\SettingsButtonNoFrame.imageset\" />
+    <Folder Include="Resources\Images.xcassets\EyeCrossed.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Oswald-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Images.xcassets\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="scandit">
+      <Version>4.9.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="json.net">
+      <Version>7.0.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoaBeePCL\BoaBeePCL.csproj">
+      <Project>{C90FACED-54E5-4F33-AEA8-C048D341560B}</Project>
+      <Name>BoaBeePCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdvancedColorPicker-master\AdvancedColorPicker-Unified\AdvancedColorPicker-Unified.csproj">
+      <Project>{AC4519F9-F624-4562-8E36-23B22C1E92DA}</Project>
+      <Name>AdvancedColorPicker-Unified</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#000000">
+    <FrameLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/frameLayout1"
+        p1:layout_above="@+id/linearLayout1">
+        <com.joanzapata.pdfview.PDFView
+            p1:id="@+id/pdfView1"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:layout_gravity="center" />
+    </FrameLayout>
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout1"
+        p1:layout_centerHorizontal="true"
+        p1:layout_alignParentBottom="true">
+        <TextView
+            p1:text="Close"
+            p1:id="@+id/dCancleDisplayView"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:textAllCaps="true"
+            p1:gravity="center"
+            p1:background="@drawable/add_prospect_button"
+            p1:textColor="#000000" />
+    </LinearLayout>
+</RelativeLayout>

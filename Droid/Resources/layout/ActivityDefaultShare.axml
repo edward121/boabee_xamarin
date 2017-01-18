@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#000000">
+    <TextView
+        p1:text="select default sharing material"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textPlashka"
+        p1:textAllCaps="true"
+        p1:gravity="center"
+        p1:textSize="16dp"
+        p1:background="#edcd00"
+        p1:textColor="#000000"
+        p1:paddingTop="16dp"
+        p1:paddingBottom="16dp" />
+    <TextView
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/ShowContacts"
+        p1:layout_alignParentBottom="true"
+        p1:layout_centerHorizontal="true"
+        p1:background="@drawable/links"
+        p1:textSize="16dp"
+        p1:textColor="#000"
+        p1:gravity="center"
+        p1:paddingTop="0dp" />
+    <TextView
+        p1:text="100"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/countFilesdefault"
+        p1:textSize="16dp"
+        p1:textColor="#000"
+        p1:layout_alignParentBottom="true"
+        p1:layout_centerHorizontal="true"
+        p1:layout_marginBottom="5dp" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/linearLayoutUp"
+        p1:paddingTop="32dp"
+        p1:paddingRight="32dp"
+        p1:paddingBottom="32dp"
+        p1:paddingLeft="32dp"
+        p1:gravity="center_vertical"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:layout_below="@+id/textPlashka">
+        <ImageView
+            p1:src="@drawable/folder_opened"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/imageView1"
+            p1:layout_marginRight="20dp"
+            p1:scaleType="fitEnd"
+            p1:adjustViewBounds="true" />
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout5">
+            <TextView
+                p1:text="Go to Up"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/nameFolderUp"
+                p1:textColor="#FFF"
+                p1:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayoutFiles"
+        p1:gravity="center_vertical"
+        p1:layout_above="@+id/ShowContacts"
+        p1:visibility="gone"
+        p1:layout_below="@+id/textPlashka">
+        <ListView xmlns:tools="http://schemas.android.com/tools"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/listFiles"
+            p1:layout_marginBottom="10dp"
+            p1:dividerHeight="0dp"
+            p1:divider="#00000000"
+            p1:scrollbars="none"
+            p1:visibility="visible"
+            p1:layout_marginTop="5dp"
+            p1:listSelector="#00000000"
+            p1:textFilterEnabled="true"
+            p1:smoothScrollbar="true"
+            p1:background="#000000"
+            tools:listitem="@layout/listitemsharefiles" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/linearLayoutFolders"
+        p1:gravity="center_vertical"
+        p1:layout_above="@+id/ShowContacts"
+        p1:visibility="visible"
+        p1:layout_below="@+id/linearLayoutUp">
+        <ListView xmlns:tools="http://schemas.android.com/tools"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/listFolders"
+            p1:layout_marginBottom="10dp"
+            p1:layout_marginTop="10dp"
+            p1:dividerHeight="1dp"
+            p1:divider="#1B1B1B"
+            p1:scrollbars="none"
+            p1:visibility="visible"
+            p1:fastScrollEnabled="true"
+            p1:smoothScrollbar="true"
+            p1:listSelector="#1B1B1B"
+            tools:listitem="@layout/listitemsharefolders"
+            p1:background="#000000" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2"
+        p1:layout_alignParentBottom="true"
+        p1:layout_toLeftOf="@+id/ShowContacts"
+        p1:gravity="right">
+        <ImageView
+            p1:src="@drawable/cross_button"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/buttonExit"
+            p1:scaleType="center"
+            p1:adjustViewBounds="true"
+            p1:paddingTop="10dp"
+            p1:paddingRight="15dp"
+            p1:paddingLeft="15dp" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout3"
+        p1:layout_alignParentBottom="true"
+        p1:layout_toRightOf="@+id/ShowContacts"
+        p1:gravity="left">
+        <ImageView
+            p1:src="@drawable/tick_button"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/btnSync"
+            p1:scaleType="center"
+            p1:adjustViewBounds="true"
+            p1:paddingTop="10dp"
+            p1:paddingRight="15dp"
+            p1:paddingLeft="15dp" />
+    </LinearLayout>
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/popRelative"
+        p1:visibility="gone">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/linearLayoutForTap"
+            p1:visibility="visible" />
+        <ListView xmlns:tools="http://schemas.android.com/tools"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:id="@+id/listViewApps"
+            p1:divider="#717171"
+            p1:dividerHeight="1dp"
+            p1:background="@drawable/bordershadowdialoglinear"
+            p1:layout_width="230dp"
+            p1:layout_height="200dp"
+            p1:layout_above="@+id/imageDialog"
+            p1:layout_marginBottom="-2dp"
+            p1:layout_centerHorizontal="true"
+            p1:listSelector="#00000000"
+            tools:listitem="@layout/listitemcontactdialog" />
+        <ImageView
+            p1:src="@drawable/triangle"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/imageDialog"
+            p1:layout_centerHorizontal="true"
+            p1:layout_alignParentBottom="true"
+            p1:layout_marginBottom="30dp"
+            p1:adjustViewBounds="false" />
+    </RelativeLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/tapzoneblock"
+        p1:visibility="gone" />
+    <TextView
+        p1:text="You are not have a files."
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textFilesNo"
+        p1:textColor="#FFF"
+        p1:textSize="18dp"
+        p1:layout_centerInParent="true" />
+</RelativeLayout>

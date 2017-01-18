@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#000">
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/relativeLayout2"
+        p1:layout_above="@+id/relativeLayout3"
+        p1:layout_marginBottom="32dp">
+        <TextView
+            p1:text="Text selected app text texttext text"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/selectedApp"
+            p1:textSize="17dp"
+            p1:textColor="#FFF"
+            p1:gravity="center"
+            p1:layout_alignParentTop="true"
+            p1:layout_marginBottom="32dp" />
+        <ImageView
+            p1:src="@drawable/bee"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/imageLogo"
+            p1:layout_below="@+id/selectedApp"
+            p1:scaleType="center"
+            p1:adjustViewBounds="true"
+            p1:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="240dp"
+        p1:id="@+id/relativeLayout3"
+        p1:layout_centerVertical="true">
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout2"
+            p1:gravity="center"
+            p1:layout_toLeftOf="@+id/linearLayout3"
+            p1:layout_marginRight="-8dp"
+            p1:layout_alignParentBottom="true">
+            <TextView
+                p1:text="28"
+                p1:id="@+id/countcontacts"
+                p1:gravity="center"
+                p1:textColor="#FFF"
+                p1:textSize="24dp"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:background="@drawable/comb_y_1" />
+            <ImageView
+                p1:src="@drawable/dotted_line_long"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageView3"
+                p1:scaleType="center"
+                p1:layout_marginTop="8dp"
+                p1:layout_marginBottom="8dp" />
+            <TextView
+                p1:text="         contacts met"
+                p1:id="@+id/contactmet"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:gravity="center"
+                p1:textSize="15dp"
+                p1:textColor="#FFFFFF" />
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout3"
+            p1:gravity="center"
+            p1:layout_centerHorizontal="true"
+            p1:layout_alignParentBottom="true">
+            <TextView
+                p1:text="28"
+                p1:id="@+id/countemails"
+                p1:gravity="center"
+                p1:textColor="#FFF"
+                p1:textSize="24dp"
+                p1:background="@drawable/comb_y_2"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content" />
+            <ImageView
+                p1:src="@drawable/dotted_line"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageView4"
+                p1:scaleType="center"
+                p1:layout_marginTop="8dp"
+                p1:layout_marginBottom="7dp" />
+            <TextView
+                p1:text="           emails sent"
+                p1:id="@+id/emailsent"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:gravity="center"
+                p1:textSize="15dp"
+                p1:textColor="#FFF" />
+        </LinearLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/linearLayout4"
+            p1:gravity="center"
+            p1:layout_toRightOf="@+id/linearLayout3"
+            p1:layout_marginLeft="-8dp"
+            p1:layout_alignParentBottom="true">
+            <TextView
+                p1:text="28"
+                p1:id="@+id/countsheets"
+                p1:gravity="center"
+                p1:textColor="#FFF"
+                p1:textSize="24dp"
+                p1:background="@drawable/comb_y_3"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content" />
+            <ImageView
+                p1:src="@drawable/dotted_line_long"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageView5"
+                p1:scaleType="center"
+                p1:layout_marginTop="8dp"
+                p1:layout_marginBottom="8dp" />
+            <TextView
+                p1:text="          info  sheets"
+                p1:id="@+id/infosheets"
+                p1:layout_width="match_parent"
+                p1:layout_height="wrap_content"
+                p1:gravity="center"
+                p1:textSize="15dp"
+                p1:textColor="#FFF" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="1px"
+        p1:minHeight="35px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout1"
+        p1:layout_centerHorizontal="true"
+        p1:layout_alignParentBottom="true"
+        p1:paddingBottom="40dp">
+        <TextView
+            p1:text="add prospect"
+            p1:layout_width="match_parent"
+            p1:layout_height="46.0dp"
+            p1:id="@+id/buttonIdetify"
+            p1:textSize="20dp"
+            p1:textColor="#000"
+            p1:background="@drawable/button_add_prospect"
+            p1:gravity="center"
+            p1:paddingRight="16dp"
+            p1:paddingLeft="16dp" />
+    </LinearLayout>
+    <ImageView
+        p1:src="@drawable/settingsip"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/btnsettings"
+        p1:layout_toRightOf="@+id/linearLayout1"
+        p1:scaleType="center"
+        p1:adjustViewBounds="true"
+        p1:layout_alignParentBottom="true"
+        p1:paddingBottom="15dp" />
+</RelativeLayout>

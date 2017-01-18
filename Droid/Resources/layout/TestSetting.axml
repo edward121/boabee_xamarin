@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2"
+        p1:layout_marginTop="200dp"
+        p1:visibility="visible">
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="1px"
+            p1:id="@+id/linearLayout5"
+            p1:background="#ff263238"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content" />
+        <RelativeLayout
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:id="@+id/relativeLayout2"
+            p1:visibility="visible"
+            p1:paddingTop="14dp"
+            p1:paddingBottom="14dp"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content">
+            <ImageView
+                p1:src="@drawable/arrows_gray"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageView1"
+                p1:layout_marginLeft="70dp" />
+            <TextView
+                p1:text="Switch app setup"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView5"
+                p1:layout_marginLeft="130dp"
+                p1:textAllCaps="true"
+                p1:textSize="21dp" />
+        </RelativeLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="1px"
+            p1:id="@+id/linearLayout5"
+            p1:background="#ff263238"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content" />
+        <RelativeLayout
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/relativeLayout3"
+            p1:visibility="visible"
+            p1:layout_weight="1"
+            p1:paddingTop="14dp"
+            p1:paddingBottom="14dp">
+            <ImageView
+                p1:src="@drawable/defaultshareicon"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageView2"
+                p1:layout_marginLeft="70dp" />
+            <TextView
+                p1:text="default sharing"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView6"
+                p1:layout_marginLeft="130dp"
+                p1:textSize="21dp"
+                p1:textAllCaps="true" />
+        </RelativeLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="1px"
+            p1:id="@+id/linearLayout5"
+            p1:background="#ff263238"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content" />
+        <RelativeLayout
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/relativeLayout3"
+            p1:visibility="visible"
+            p1:layout_weight="1"
+            p1:paddingTop="14dp"
+            p1:paddingBottom="14dp">
+            <ImageView
+                p1:src="@drawable/bin_gray"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageView2"
+                p1:layout_marginLeft="70dp" />
+            <TextView
+                p1:text="default sharing"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView6"
+                p1:layout_marginLeft="130dp"
+                p1:textSize="21dp"
+                p1:textAllCaps="true" />
+        </RelativeLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="1px"
+            p1:id="@+id/linearLayout5"
+            p1:background="#ff263238"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content" />
+        <RelativeLayout
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/relativeLayout3"
+            p1:visibility="visible"
+            p1:layout_weight="1"
+            p1:paddingTop="14dp"
+            p1:paddingBottom="14dp">
+            <ImageView
+                p1:src="@drawable/cloud_gray"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/imageView2"
+                p1:layout_marginLeft="70dp" />
+            <TextView
+                p1:text="default sharing"
+                p1:layout_width="wrap_content"
+                p1:layout_height="wrap_content"
+                p1:id="@+id/textView6"
+                p1:layout_marginLeft="130dp"
+                p1:textSize="21dp"
+                p1:textAllCaps="true" />
+        </RelativeLayout>
+        <LinearLayout
+            p1:orientation="vertical"
+            p1:minWidth="25px"
+            p1:minHeight="1px"
+            p1:id="@+id/linearLayout5"
+            p1:background="#ff263238"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout3"
+        p1:layout_marginLeft="40dp"
+        p1:layout_marginRight="40dp"
+        p1:layout_marginTop="20dp">
+        <TextView
+            p1:text="Status"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView4"
+            p1:textSize="24dp"
+            p1:textAllCaps="false"
+            p1:textColor="#ffffff00" />
+        <TextView
+            p1:text="BRUCCEL CAR SHOW wejgr"
+            p1:id="@+id/textView2"
+            p1:textSize="14dp"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_marginTop="4dp"
+            p1:layout_marginBottom="4dp" />
+        <TextView
+            p1:text="kolibrisoft@gmail.ru"
+            p1:id="@+id/textView3"
+            p1:textSize="14dp"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_marginBottom="4dp"
+            p1:layout_marginTop="4dp" />
+        <TextView
+            p1:text="Not all your work is safely in the cloud. Check your internet connection and and use the SYNC MANUAL bbutton of necessary."
+            p1:id="@+id/textView1"
+            p1:textColor="#ffffff00"
+            p1:textSize="14dp"
+            p1:textAllCaps="false"
+            p1:visibility="visible"
+            p1:layout_width="316.5dp"
+            p1:layout_height="wrap_content"
+            p1:layout_marginTop="4dp" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout4"
+        p1:layout_alignParentBottom="true">
+        <TextView
+            p1:text="Close"
+            p1:layout_width="110dp"
+            p1:layout_height="35dp"
+            p1:id="@+id/textView7"
+            p1:textSize="18dp"
+            p1:background="@drawable/select_your_fair_button"
+            p1:textColor="#ff263238"
+            p1:layout_marginLeft="140dp"
+            p1:layout_marginRight="150dp"
+            p1:gravity="center" />
+    </LinearLayout>
+</RelativeLayout>

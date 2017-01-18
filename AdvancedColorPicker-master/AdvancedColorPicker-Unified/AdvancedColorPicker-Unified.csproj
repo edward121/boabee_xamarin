@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC4519F9-F624-4562-8E36-23B22C1E92DA}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AdvancedColorPicker</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>AdvancedColorPicker</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <DocumentationFile>bin\Debug\AdvancedColorPicker.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <DocumentationFile>bin\Release\AdvancedColorPicker.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\AdvancedColorPicker\ColorPickedEventArgs.cs">
+      <Link>ColorPickedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\AdvancedColorPicker\ColorPickerView.cs">
+      <Link>ColorPickerView.cs</Link>
+    </Compile>
+    <Compile Include="..\AdvancedColorPicker\ColorPickerViewController.cs">
+      <Link>ColorPickerViewController.cs</Link>
+    </Compile>
+    <Compile Include="..\AdvancedColorPicker\HueIndicatorView.cs">
+      <Link>HueIndicatorView.cs</Link>
+    </Compile>
+    <Compile Include="..\AdvancedColorPicker\HuePickerView.cs">
+      <Link>HuePickerView.cs</Link>
+    </Compile>
+    <Compile Include="..\AdvancedColorPicker\SaturationBrightnessIndicatorView.cs">
+      <Link>SaturationBrightnessIndicatorView.cs</Link>
+    </Compile>
+    <Compile Include="..\AdvancedColorPicker\SaturationBrightnessPickerView.cs">
+      <Link>SaturationBrightnessPickerView.cs</Link>
+    </Compile>
+    <Compile Include="..\AdvancedColorPicker\SelectedColorPreviewView.cs">
+      <Link>SelectedColorPreviewView.cs</Link>
+    </Compile>
+  </ItemGroup>
+</Project>

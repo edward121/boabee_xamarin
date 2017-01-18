@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="AppTheme" parent="android:Theme">
+		<item name="android:background">@drawable/homescreen_background</item>
+		<item name="android:windowBackground">@drawable/homescreen_background</item>
+
+	</style>
+<!--	@android:style/Theme.Light #edcd00  android:Theme.Holo.NoActionBar-->
+	<style name="ActivityTheme" parent="Theme.AppCompat.NoActionBar"> 
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:colorAccent">#edcd00</item>
+		<item name="colorAccent">#edcd00</item>
+	</style>
+
+	<style name="ActivityThemeS" parent="android:Theme.Holo.NoActionBar"> 
+		<item name="android:windowActionBar">false</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	<style name="Color1SwitchStyle">
+    <item name="android:colorControlActivated">#edcd00</item>
+</style>
+	<style name="ActivityThemeTabBar" parent="android:Theme.Holo.Light"> 
+		<item name="android:windowActionBar">true</item>
+		<item name="android:windowNoTitle">false</item>
+		<item name="android:actionBarStyle">@style/MyActionBarTab</item>
+	    <item name="android:actionBarTabStyle">@style/MyActionBarTabStyle</item>
+	    <item name="android:actionBarTabTextStyle">@style/MyActionBarTabText</item>
+	    <item name="android:actionMenuTextColor">#000000</item>
+	    <item name="android:windowBackground">@android:color/transparent</item>
+	</style>
+
+	<style name="MyActionBarTab" parent="@android:style/Widget.Holo.Light.ActionBar">
+    	<item name="android:background">#000000</item>
+	</style>
+
+	<style name="MyActionBarTabStyle" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+    	<item name="android:background">@drawable/tab_bar_background</item>
+	</style>
+
+   <style name="MyActionBarTabText" parent="@android:style/Widget.Holo.ActionBar.TabText">
+		<item name="android:textColor">#FFF</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+   </style>
+
+	<style name="TransparentProgressDialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+</resources>

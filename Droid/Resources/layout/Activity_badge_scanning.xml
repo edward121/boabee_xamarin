@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="fill_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1">
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/relativeLayout3"
+        p1:gravity="end" />
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="match_parent"
+        p1:id="@+id/relativeLayout2" />
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout2"
+        p1:gravity="right"
+        p1:paddingRight="20dp"
+        p1:paddingTop="20dp">
+        <TextView
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/MultiButton"
+            p1:background="@drawable/icon_single"
+            p1:gravity="center"
+            p1:textColor="#ff000000"
+            p1:alpha="0.7" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout1"
+        p1:layout_alignParentBottom="true"
+        p1:gravity="center">
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:id="@+id/linearLayout3"
+            p1:gravity="bottom"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_weight="1">
+            <TextView
+                p1:text="X"
+                p1:id="@+id/cancelButton"
+                p1:textSize="18dp"
+                p1:gravity="center"
+                p1:background="@drawable/buttong"
+                p1:textColor="#ff000000"
+                p1:layout_width="match_parent"
+                p1:layout_height="25dp" />
+        </LinearLayout>
+        <TextView
+            p1:text="manual"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/manualButton"
+            p1:textColor="#ff000000"
+            p1:gravity="center"
+            p1:textSize="25dp"
+            p1:background="@drawable/add_prospect_button"
+            p1:layout_weight="1" />
+        <TextView
+            p1:text="lookup"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:id="@+id/lookupButton"
+            p1:textSize="25dp"
+            p1:background="@drawable/add_prospect_button"
+            p1:textColor="#ff000000"
+            p1:gravity="center"
+            p1:layout_weight="1" />
+        <LinearLayout
+            p1:orientation="horizontal"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:id="@+id/linearLayout4"
+            p1:gravity="bottom"
+            p1:layout_width="wrap_content"
+            p1:layout_height="match_parent"
+            p1:layout_weight="1">
+            <TextView xmlns:tools="http://schemas.android.com/tools"
+                p1:text="&gt;"
+                p1:layout_width="match_parent"
+                p1:layout_height="25dp"
+                p1:id="@+id/countContacts"
+                p1:gravity="center"
+                p1:textSize="20dp"
+                tools:visibility="invisible"
+                p1:background="@drawable/buttong"
+                p1:textColor="#ff000000" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,391 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{83789144-C8C9-4E79-851A-93C0D9C690FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Leadbox</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>BoaBee</AssemblyName>
+    <TargetFrameworkVersion>v4.1</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <DebugSymbols>true</DebugSymbols>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <ConsolePause>false</ConsolePause>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.0.11\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v13">
+      <HintPath>..\packages\Xamarin.Android.Support.v13.21.0.3.0\lib\MonoAndroid32\Xamarin.Android.Support.v13.dll</HintPath>
+    </Reference>
+    <Reference Include="ScanditSDK">
+      <HintPath>..\Components\scandit-4.9.1\lib\android\ScanditSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="DroidPdfView">
+      <HintPath>DroidPdfView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.1.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Auth0Client.Android">
+      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Auth0Client.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Auth.Android">
+      <HintPath>..\Components\Auth0Client-0.5.0\lib\android\Xamarin.Auth.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.2.12\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.2.12\lib\MonoAndroid10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\ProfilesListAdapter.cs" />
+    <Compile Include="Activity\ActivityHomescreen.cs" />
+    <Compile Include="Manager\ConnectManager.cs" />
+    <Compile Include="Fragments\FragmentIdentifyScreen.cs" />
+    <Compile Include="Fragments\FragmentClassifyScreen.cs" />
+    <Compile Include="Fragments\FragmentShareScreen.cs" />
+    <Compile Include="Data\QuestionsListAdapter.cs" />
+    <Compile Include="Fragments\SlidingTabScrollView.cs" />
+    <Compile Include="Fragments\SlidingTabsFragment.cs" />
+    <Compile Include="Fragments\SlidingTabStrip.cs" />
+    <Compile Include="Fragments\GenericFragmentPagerAdaptor.cs" />
+    <Compile Include="Fragments\GenericViewPagerFragment.cs" />
+    <Compile Include="Manager\SaveAndLoad.cs" />
+    <Compile Include="Data\ContactsPopupListAdapter.cs" />
+    <Compile Include="Data\ContactsListAdapter.cs" />
+    <Compile Include="Data\FoldersListAdapter.cs" />
+    <Compile Include="Data\FilesListAdapter.cs" />
+    <Compile Include="Data\FilesPopupListAdapter.cs" />
+    <Compile Include="Manager\SaveFilesManager.cs" />
+    <Compile Include="Data\OverviewContactsListAdapter.cs" />
+    <Compile Include="Activity\ActivitySelectApp.cs" />
+    <Compile Include="Data\OverviewSharesListAdapter.cs" />
+    <Compile Include="Data\OverviewSharesDetailListAdapter.cs" />
+    <Compile Include="Data\QuestionSelectListAdapter.cs" />
+    <Compile Include="BackgroundSync\BSCustomers.cs" />
+    <Compile Include="Data\OverviewAnswersListAdapter.cs" />
+    <Compile Include="Activity\ActivityLoginForm.cs" />
+    <Compile Include="BackgroundSync\BSAnswersUpdate.cs" />
+    <Compile Include="Fragments\FragmentsInputPassword.cs" />
+    <Compile Include="Activity\ColorPickerDialog.cs" />
+    <Compile Include="Activity\ColorPickerPanelView.cs" />
+    <Compile Include="Activity\ColorChangedEventArgs.cs" />
+    <Compile Include="Activity\RoundColorPickerView.cs" />
+    <Compile Include="Activity\ColorPickerView.cs" />
+    <Compile Include="Activity\AlphaPatternDrawable.cs" />
+    <Compile Include="Activity\ColorUtils.cs" />
+    <Compile Include="Activity\Kiosk\ActivityColorPicker.cs" />
+    <Compile Include="Activity\Kiosk\ActivityEmailKiosk.cs" />
+    <Compile Include="Activity\Kiosk\ActivityFinishKiosk.cs" />
+    <Compile Include="Activity\Kiosk\ActivityKioskMain.cs" />
+    <Compile Include="Activity\Kiosk\ActivityTouchKiosk.cs" />
+    <Compile Include="Activity\Kiosk\ActivitySettingsKiosk.cs" />
+    <Compile Include="Activity\Kiosk\ActivitySizeFont.cs" />
+    <Compile Include="Activity\BoaBee\Prospect\ActivityBadgeScanning.cs" />
+    <Compile Include="Activity\BoaBee\Prospect\ActivityIdentifyClassifyShare.cs" />
+    <Compile Include="Activity\BoaBee\Prospect\ActivityNewContactScreen.cs" />
+    <Compile Include="Activity\BoaBee\Prospect\ActivitySelectContact.cs" />
+    <Compile Include="Activity\BoaBee\Prospect\ActivityEditScannedContact.cs" />
+    <Compile Include="Activity\BoaBee\Prospect\ActivityEditSelectedContact.cs">
+      <DependentUpon>ActivitySelectContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\BoaBee\Overview\ActivityOverviewForms.cs" />
+    <Compile Include="Activity\BoaBee\Overview\ActivityOverviewFormsDetail.cs">
+      <DependentUpon>ActivityOverviewForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\BoaBee\Overview\ActivityOverviewShares.cs" />
+    <Compile Include="Activity\BoaBee\Overview\ActivityOverviewSharesDetail.cs">
+      <DependentUpon>ActivityOverviewShares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\BoaBee\Prospect\ActivitySelectQuestion.cs" />
+    <Compile Include="Activity\BoaBee\Prospect\ActivityReceivingInformation.cs" />
+    <Compile Include="Activity\BoaBee\ActivityDefaultShare.cs" />
+    <Compile Include="Activity\BoaBee\ActivityDisplayImage.cs" />
+    <Compile Include="Activity\BoaBee\ActivityDisplayPdf.cs" />
+    <Compile Include="Activity\BoaBee\ActivitySettingsScreen.cs" />
+    <Compile Include="Activity\Kiosk\ActivitySelectColor.cs" />
+    <Compile Include="Data\QuestionsListAdapterForKiosk.cs" />
+    <Compile Include="Fragments\FragmentCloseKiosok.cs" />
+    <Compile Include="Resources\layout\ActivityOverviewContacts.cs" />
+    <Compile Include="Resources\layout\ActivityOverviewContactsDetail.cs">
+      <DependentUpon>ActivityOverviewContacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activity\BoaBee\Prospect\ActivitySelectedContacts.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\layout\LoginLayout.axml" />
+    <AndroidResource Include="Resources\layout\SelectAppLayout.axml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\values\style.xml" />
+    <AndroidResource Include="Resources\drawable\borderGrey.xml" />
+    <AndroidResource Include="Resources\drawable\borderItem.xml" />
+    <AndroidResource Include="Resources\layout\custom_progressdialog.xml" />
+    <AndroidResource Include="Resources\drawable\progressdialog.xml" />
+    <AndroidResource Include="Resources\layout\ListItemApp.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\indentifyscreen_barcode.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\indentifyscreen_lookup.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\indentifyscreen_manual.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\indentifyscreen_barcode.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\indentifyscreen_lookup.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\indentifyscreen_manual.png" />
+    <AndroidResource Include="Resources\layout\Receiving_information_layout.axml" />
+    <AndroidResource Include="Resources\layout\New_contact_screen.axml" />
+    <AndroidResource Include="Resources\layout\Activity_identify_classify_share.axml" />
+    <AndroidResource Include="Resources\layout\ActionBurCustom.xml" />
+    <AndroidResource Include="Resources\layout\ListItemClassify.xml" />
+    <AndroidResource Include="Resources\layout\Activity_classify_screen.axml" />
+    <AndroidResource Include="Resources\layout\ListItemClassifyText.xml" />
+    <AndroidResource Include="Resources\layout\fragment_sample.axml" />
+    <AndroidResource Include="Resources\layout\ActionBarCustomTab.axml" />
+    <AndroidResource Include="Resources\layout\action_bar.axml" />
+    <AndroidResource Include="Resources\layout\item_text_select.axml" />
+    <AndroidResource Include="Resources\drawable\borderItemText.xml" />
+    <AndroidResource Include="Resources\drawable\borderShadowDialogLinear.xml" />
+    <AndroidResource Include="Resources\layout\ListItemContactDialog.xml" />
+    <AndroidResource Include="Resources\layout\ListItemShareFolders.xml" />
+    <AndroidResource Include="Resources\layout\ListItemShareFiles.xml" />
+    <AndroidResource Include="Resources\layout\ListItemContact.xml" />
+    <AndroidResource Include="Resources\layout\Activity_badge_scanning.xml" />
+    <AndroidResource Include="Resources\drawable\borderItemRed.xml" />
+    <AndroidResource Include="Resources\drawable\borderItemRedText.xml" />
+    <AndroidResource Include="Resources\layout\ListItemShareFolderUp.xml" />
+    <AndroidResource Include="Resources\drawable\Activity_my_work.axml" />
+    <AndroidResource Include="Resources\drawable\borderwhite.xml" />
+    <AndroidResource Include="Resources\layout\Activity_my_work.axml" />
+    <AndroidResource Include="Resources\layout\OverviewShareLayout.axml" />
+    <AndroidResource Include="Resources\layout\OverviewContactLayout.axml" />
+    <AndroidResource Include="Resources\layout\OverviewFormLayout.axml" />
+    <AndroidResource Include="Resources\layout\OverviewShareDetailLayout.axml" />
+    <AndroidResource Include="Resources\layout\Edit_contact_screen.axml" />
+    <AndroidResource Include="Resources\layout\SelectContactLayout.axml" />
+    <AndroidResource Include="Resources\layout\SelectQuestionsLayout.axml" />
+    <AndroidResource Include="Resources\layout\Overview_contact_detail.axml" />
+    <AndroidResource Include="Resources\layout\ListItemFormDetail.xml" />
+    <AndroidResource Include="Resources\layout\OverviewFormLayoutDetail.axml" />
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\garbage.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\image_dialog.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\xisx.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\add_selected.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bin.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\folder.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\pdf.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\png.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\www.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\blue_circle.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cloud_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cloud.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\indentifyscreen_barcode.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\indentifyscreen_lookup.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\indentifyscreen_manual.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\play_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\play_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\raceflag.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\red_backet.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\homescreen_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\other_background.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo_bee.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo_name.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\select_your_fair_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\comb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dotted_line_long.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\dotted_line.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bee.png" />
+    <AndroidResource Include="Resources\layout\Activity_settings_screen.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\trash_black.png" />
+    <AndroidResource Include="Resources\layout\item_text_overviewshare.axml" />
+    <AndroidResource Include="Resources\layout\Activity_identify_screen.axml" />
+    <AndroidResource Include="Resources\drawable\tab_bar_background.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\badge.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\look_up.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\manual.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\comb_y_1.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\comb_y_2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\comb_y_3.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\comb_yellow.png" />
+    <AndroidResource Include="Resources\drawable\borderTextEditGrey.xml" />
+    <AndroidResource Include="Resources\layout\Homescreen_layout.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\conacts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cross_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\tick_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\folder_opened.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\folder_usual.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\links.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\share_add_file.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\triangle.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cross.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\login_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrows_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bin_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\cloud_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\red_cloud_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\app_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\app_icon_notify.png" />
+    <AndroidResource Include="Resources\layout\ActivityDefaultShare.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\button_AR.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_black.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\arrow_yellow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Arrow_black_yellow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\defaultShareIcon.png" />
+    <AndroidResource Include="Resources\layout\TestSetting.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\addBattonout.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\addButton.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\iconstar.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\settingsIPh2.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\settingsIP2big.png" />
+    <AndroidResource Include="Resources\layout\Touch_start_layout.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\combbig.png" />
+    <AndroidResource Include="Resources\layout\input_email_layout.axml" />
+    <AndroidResource Include="Resources\layout\contact_screen_kiosok.axml" />
+    <AndroidResource Include="Resources\layout\KioskSettingLayout.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\combyelow.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\figura.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\combnorm.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\iconkiosk.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\iconkiosksmall.png" />
+    <AndroidResource Include="Resources\layout\DisplayImage.axml" />
+    <AndroidResource Include="Resources\layout\DisplayPdf.axml" />
+    <AndroidResource Include="Resources\layout\Activity_share_screen.axml" />
+    <AndroidResource Include="Resources\layout\ListItemClassifyDateTime.axml" />
+    <AndroidResource Include="Resources\layout\item_text_select_kiosk.axml" />
+    <AndroidResource Include="Resources\layout\TouchFinishLayout.axml" />
+    <AndroidResource Include="Resources\layout\InputPasswordLayout.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\buttonBlack.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\buttonBlackSmall.png" />
+    <AndroidResource Include="Resources\layout\KioskMain.axml" />
+    <AndroidResource Include="Resources\layout\ColorPickerLayout.axml" />
+    <AndroidResource Include="Resources\layout\DalogColorPicker.axml" />
+    <AndroidResource Include="Resources\layout\SizeLayout.axml" />
+    <AndroidResource Include="Resources\layout\SelectColorLayout.axml" />
+    <AndroidResource Include="Resources\layout\DialogCloseKiosok.axml" />
+    <AndroidResource Include="Resources\layout\FragmentCloseBadgeScreen.axml" />
+    <AndroidResource Include="Resources\layout\Edit_Scanned_contact_screen.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\storage.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\add_prospect_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\buttong.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\button_add_prospect.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\button_file_count.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_multi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_single.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\settings_button.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_multi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_single.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\settingsIP.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\add_prospect_button.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_multi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_single.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\add_prospect_button.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_multi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_single.png" />
+    <AndroidResource Include="Resources\layout\ActivitySelectedContacts.axml" />
+    <AndroidResource Include="Resources\drawable\count_contacts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\count_contacts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\EyeIcon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\EyeIcon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\eye_crossed.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\eye_crossed.png" />
+    <AndroidResource Include="Resources\layout\InputPassword.axml" />
+  </ItemGroup>
+  <Import Project="..\BoaBeeLogic\BoaBeeLogic.projitems" Label="Shared" Condition="Exists('..\BoaBeeLogic\BoaBeeLogic.projitems')" />
+  <Import Project="..\packages\SQLitePCL.raw_basic.0.8.2\build\MonoAndroid\SQLitePCL.raw_basic.targets" Condition="Exists('..\packages\SQLitePCL.raw_basic.0.8.2\build\MonoAndroid\SQLitePCL.raw_basic.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidAsset Include="Assets\HelveticaNeueLTStd-Lt %282%29.otf" />
+    <AndroidAsset Include="Assets\HelveticaNeueLTStd-Lt.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="json.net">
+      <Version>6.0.8.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv13-18">
+      <Version>21.0.3.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="scandit">
+      <Version>4.9.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Version>23.1.1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
+      <Version>23.1.1.1</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="Auth0Client">
+      <Version>0.5.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Activity\Kiosk\" />
+    <Folder Include="Activity\BoaBee\" />
+    <Folder Include="Activity\BoaBee\Prospect\" />
+    <Folder Include="Activity\BoaBee\Overview\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BoaBeePCL\BoaBeePCL.csproj">
+      <Project>{C90FACED-54E5-4F33-AEA8-C048D341560B}</Project>
+      <Name>BoaBeePCL</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

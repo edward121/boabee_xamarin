@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#000000">
+    <TextView
+        p1:text="select a contact"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textselectapp"
+        p1:textSize="24dp"
+        p1:textColor="#EDCD00"
+        p1:gravity="left"
+        p1:layout_marginTop="32dp"
+        p1:layout_marginRight="32dp"
+        p1:layout_marginBottom="16dp"
+        p1:layout_marginLeft="32dp"
+        p1:textAllCaps="true" />
+    <EditText
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/lookUpFilter"
+        p1:layout_below="@+id/textselectapp"
+        p1:textSize="16dp"
+        p1:textColor="#FFF"
+        p1:textColorHint="#717171"
+        p1:background="#1B1B1B"
+        p1:paddingTop="16dp"
+        p1:paddingRight="32dp"
+        p1:paddingBottom="16dp"
+        p1:paddingLeft="32dp"
+        p1:hint="Type to filter"
+        p1:gravity="center"
+        p1:textCursorDrawable="@null"
+        p1:singleLine="true"
+        p1:inputType="textFilter" />
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/relativeLayout2"
+        p1:gravity="center_vertical"
+        p1:clipToPadding="false"
+        p1:layout_centerInParent="true"
+        p1:layout_above="@+id/buttonCancel"
+        p1:layout_marginTop="10dp"
+        p1:layout_marginBottom="10dp"
+        p1:layout_below="@+id/lookUpFilter">
+        <ListView xmlns:tools="http://schemas.android.com/tools"
+            p1:minWidth="25px"
+            p1:minHeight="25px"
+            p1:layout_width="match_parent"
+            p1:layout_height="match_parent"
+            p1:id="@+id/listViewApps"
+            p1:background="#00FFFFFF"
+            p1:dividerHeight="1dp"
+            p1:divider="#1B1B1B"
+            tools:listitem="@layout/listitemcontact"
+            p1:choiceMode="none"
+            p1:listSelector="#1B1B1B" />
+    </RelativeLayout>
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/linearLayout3"
+        p1:gravity="bottom"
+        p1:layout_width="wrap_content"
+        p1:layout_height="match_parent">
+        <TextView
+            p1:text="X"
+            p1:layout_width="60.0dp"
+            p1:layout_height="25.0dp"
+            p1:id="@+id/buttonCancel"
+            p1:textSize="18dp"
+            p1:gravity="center"
+            p1:background="@drawable/buttong"
+            p1:textColor="#ff000000" />
+    </LinearLayout>
+</RelativeLayout>

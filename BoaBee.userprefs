@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{F6CAB31F-F0FE-4870-9AF0-BF96D5005FAA}|Default">
+  <MonoDevelop.Ide.ItemProperties.BoaBee.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="iOS/ViewController/ScannerViewController.cs" Line="70" Column="111" />
+      <File FileName="iOS/EditScannedContactRootViewController.cs" Line="1" Column="1" />
+      <File FileName="BoaBeeLogic/OfflineLogic.cs" Line="102" Column="88" />
+      <File FileName="BoaBeePCL/DBEntities/DBlocalContact.cs" Line="154" Column="47" />
+      <File FileName="iOS/Info.plist" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

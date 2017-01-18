@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#ffffff">
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/relativeLayout2"
+        p1:background="#000"
+        p1:paddingTop="16dp"
+        p1:paddingBottom="16dp">
+        <TextView
+            p1:text="Welcome"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textView2"
+            p1:layout_centerInParent="true"
+            p1:textSize="18dp"
+            p1:textColor="#ffffff" />
+    </RelativeLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout1"
+        p1:layout_centerHorizontal="true"
+        p1:layout_centerVertical="true">
+        <TextView
+            p1:text="Please enter your email address"
+            p1:id="@+id/textView1"
+            p1:textSize="18dp"
+            p1:textColor="#000"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:layout_gravity="center"
+            p1:layout_marginTop="30dp" />
+        <EditText
+            p1:layout_width="match_parent"
+            p1:layout_height="34dp"
+            p1:id="@+id/editText1"
+            p1:textColor="#000"
+            p1:layout_marginTop="15dp"
+            p1:background="#ffe0e0e0"
+            p1:textAlignment="center"
+            p1:layout_marginLeft="20dp"
+            p1:layout_marginRight="20dp"
+            p1:layout_gravity="center"
+            p1:gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/linearLayout2"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_alignParentBottom="true"
+        p1:layout_toLeftOf="@+id/linearLayout4">
+        <TextView
+            p1:text="cancel"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textCancel"
+            p1:gravity="center"
+            p1:textSize="18dp"
+            p1:textColor="#ffffff"
+            p1:background="@drawable/buttonblacksmall" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:id="@+id/linearLayout3"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:layout_toRightOf="@+id/linearLayout4"
+        p1:layout_alignParentBottom="true">
+        <TextView
+            p1:text="next"
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:id="@+id/textNext"
+            p1:background="@drawable/buttonblacksmall"
+            p1:textColor="#ffffff"
+            p1:textSize="18dp"
+            p1:gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        p1:orientation="horizontal"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="wrap_content"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout4"
+        p1:layout_alignParentBottom="true"
+        p1:layout_marginLeft="20dp"
+        p1:layout_marginRight="20dp"
+        p1:layout_centerHorizontal="true" />
+</RelativeLayout>

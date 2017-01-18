@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.1.167" package="com.qtree.BoaBee" android:installLocation="auto" android:versionCode="15">
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
+	<application android:label="BoaBee" android:theme="@style/AppTheme" android:icon="@drawable/app_icon">
+		<activity android:name="BoaBee" android:theme="@style/AppTheme" android:windowSoftInputMode="stateAlwaysHidden"></activity>
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<!--	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.REORDER_TASKS" />-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!--	<uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />-->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<!--	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />-->
+	<!--	<uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+	<uses-permission android:name="android.permission.READ_SYNC_STATS" />-->
+</manifest>

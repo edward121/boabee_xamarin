@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/relativeLayout1"
+    p1:background="#ffffff">
+    <LinearLayout
+        p1:orientation="vertical"
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/linearLayout1">
+        <TextView
+            p1:text="First name"
+            p1:id="@+id/textfirstnameKiosk"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:textSize="18dp"
+            p1:layout_marginLeft="150dp"
+            p1:layout_marginRight="130dp"
+            p1:layout_marginTop="8dp"
+            p1:textColor="#000"
+            p1:layout_marginBottom="8dp" />
+        <EditText
+            p1:inputType="textPersonName"
+            p1:id="@+id/editfirstnameKiosk"
+            p1:layout_width="match_parent"
+            p1:layout_height="25dp"
+            p1:background="#fff5f5f5"
+            p1:textSize="16dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp" />
+        <TextView
+            p1:text="Last name"
+            p1:id="@+id/textlastnameKiosk"
+            p1:textColor="#000"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:layout_marginLeft="150dp"
+            p1:layout_marginRight="130dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp"
+            p1:textSize="18dp" />
+        <EditText
+            p1:inputType="textPersonName"
+            p1:id="@+id/editlastnameKiosk"
+            p1:layout_width="match_parent"
+            p1:layout_height="25dp"
+            p1:background="#fff5f5f5"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp" />
+        <TextView
+            p1:text="Company"
+            p1:id="@+id/textCompanyKiosk"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:textSize="18dp"
+            p1:textColor="#000"
+            p1:layout_marginLeft="150dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginRight="130dp"
+            p1:layout_marginBottom="8dp" />
+        <EditText
+            p1:inputType="textMultiLine"
+            p1:id="@+id/editCompanyKiosk"
+            p1:layout_width="match_parent"
+            p1:layout_height="25dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp"
+            p1:background="#fff5f5f5" />
+        <TextView
+            p1:text="In which project are you interested?"
+            p1:id="@+id/textinterestedKiosk"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:textSize="18dp"
+            p1:textColor="#000"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginLeft="40dp"
+            p1:layout_marginRight="40dp"
+            p1:layout_marginBottom="8dp" />
+        <EditText
+            p1:inputType="textMultiLine"
+            p1:id="@+id/editinterestedKiosk"
+            p1:layout_width="match_parent"
+            p1:layout_height="25dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp"
+            p1:background="#fff5f5f5" />
+        <TextView
+            p1:text="How often do you buy new clothes?"
+            p1:id="@+id/textbuyclothe"
+            p1:layout_width="match_parent"
+            p1:layout_height="wrap_content"
+            p1:textSize="18dp"
+            p1:textColor="#000"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp"
+            p1:layout_marginLeft="40dp"
+            p1:layout_marginRight="30dp" />
+        <EditText
+            p1:inputType="textMultiLine"
+            p1:id="@+id/editText5"
+            p1:layout_width="match_parent"
+            p1:layout_height="25dp"
+            p1:layout_marginTop="8dp"
+            p1:layout_marginBottom="8dp"
+            p1:background="#fff5f5f5" />
+    </LinearLayout>
+    <RelativeLayout
+        p1:minWidth="25px"
+        p1:minHeight="25px"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/relativeLayoutContent" />
+</RelativeLayout>
